@@ -1,35 +1,36 @@
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import {Link} from "react-router-dom"
+
 export default function Header(){
    return(
-      <>
-      
-      
-         <div className="container bg-dark">
-            
-            <nav className="navbar navbar-default navbar-fixed-top " role="navigation">
-               <a className="navbar-brand text-light" href="#">AnimeList</a>
-               <ul className="nav nav-navbar d-inline-flex px-2 " >
-                  <li >
-                     <a className=' btn btn-default text-light px-2 stretched-link' href="#">Home</a>
-                  </li>
-                  <li>
-                     <a className='btn btn-default text-light px-1'  href="#">Recent Release</a>
-                  </li>
-                  <li>
-                     <a className='btn btn-default text-light px-1'  href="#">Popular</a>
-                  </li>
-                  <li>
-                     <a className='btn btn-default text-light px-1'  href="#">Anime Movies</a>
-                  </li>
-                  <li>
-                     <a className='btn btn-default text-light px-1'  href="#">Genre</a>
-                  </li>
-               </ul>
-            </nav>
-            
-         </div>
+      <div className="container">
          
-      </>
+         <nav className="navbar navbar-expand navbar-light bg-dark bg-gradient justify-content-between">
+            <a className="navbar-brand text-light mx-2" href="/">AnimeNews</a>
+            
+            <ul className="nav navbar-nav justify-content-center">
+               <li className="nav-item">
+                  <Link className="nav-link text-light" to='/home'>Home</Link>
+               </li>
+               <li class="nav-item">
+                  <Link className="nav-link text-light" to='/popular'>Popular</Link>
+               </li>
+               <li class="nav-item">
+                  <Link className="nav-link text-light" to='/anime_movies'>Anime Movies</Link>
+               </li>
+               <li class="nav-item">
+                  <Link className="nav-link text-light" to='/Recent_realise'>Recent Realise</Link>
+               </li>
+               <li class="nav-item">
+                  <Link className="nav-link text-light" to='/genre'>Genre</Link>
+               </li>
+            </ul>
+         </nav>
+         
+         
+         
+         
+      
+      </div>
    )
 }
